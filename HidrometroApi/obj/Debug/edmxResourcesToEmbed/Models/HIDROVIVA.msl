@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HIDROVIVAModelStoreContainer" CdmEntityContainer="HIDROVIVAEntities">
+    <EntitySetMapping Name="ConsumoDiario">
+      <EntityTypeMapping TypeName="HIDROVIVAModel.ConsumoDiario">
+        <MappingFragment StoreEntitySet="ConsumoDiario">
+          <ScalarProperty Name="IdConsumoDiario" ColumnName="IdConsumoDiario" />
+          <ScalarProperty Name="IdPerfil" ColumnName="IdPerfil" />
+          <ScalarProperty Name="DataConsumo" ColumnName="DataConsumo" />
+          <ScalarProperty Name="M3Consumidos" ColumnName="M3Consumidos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConsumoMensal">
+      <EntityTypeMapping TypeName="HIDROVIVAModel.ConsumoMensal">
+        <MappingFragment StoreEntitySet="ConsumoMensal">
+          <ScalarProperty Name="IdConsumoMensal" ColumnName="IdConsumoMensal" />
+          <ScalarProperty Name="IdConsumoDiario" ColumnName="IdConsumoDiario" />
+          <ScalarProperty Name="TotalConsumido" ColumnName="TotalConsumido" />
+          <ScalarProperty Name="Premiacao" ColumnName="Premiacao" />
+          <ScalarProperty Name="Advertencia" ColumnName="Advertencia" />
+          <ScalarProperty Name="MesAno" ColumnName="MesAno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Endereco">
+      <EntityTypeMapping TypeName="HIDROVIVAModel.Endereco">
+        <MappingFragment StoreEntitySet="Endereco">
+          <ScalarProperty Name="IdEndereco" ColumnName="IdEndereco" />
+          <ScalarProperty Name="Logradouro" ColumnName="Logradouro" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Instalacao">
+      <EntityTypeMapping TypeName="HIDROVIVAModel.Instalacao">
+        <MappingFragment StoreEntitySet="Instalacao">
+          <ScalarProperty Name="IdInstalacao" ColumnName="IdInstalacao" />
+          <ScalarProperty Name="NumeroMoradores" ColumnName="NumeroMoradores" />
+          <ScalarProperty Name="TempoPermanenciaDiaria" ColumnName="TempoPermanenciaDiaria" />
+          <ScalarProperty Name="MediaConsumoDiario" ColumnName="MediaConsumoDiario" />
+          <ScalarProperty Name="ApelidoInstalacao" ColumnName="ApelidoInstalacao" />
+          <ScalarProperty Name="InstalacaoUsoComum" ColumnName="InstalacaoUsoComum" />
+          <ScalarProperty Name="InstalacaoAtiva" ColumnName="InstalacaoAtiva" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParametroSistema">
+      <EntityTypeMapping TypeName="HIDROVIVAModel.ParametroSistema">
+        <MappingFragment StoreEntitySet="ParametroSistema">
+          <ScalarProperty Name="IdParametro" ColumnName="IdParametro" />
+          <ScalarProperty Name="IdTaxa" ColumnName="IdTaxa" />
+          <ScalarProperty Name="QtdInstalacoes" ColumnName="QtdInstalacoes" />
+          <ScalarProperty Name="MetaDeConsumoIndividual" ColumnName="MetaDeConsumoIndividual" />
+          <ScalarProperty Name="ValorParaAlerta" ColumnName="ValorParaAlerta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Perfil">
+      <EntityTypeMapping TypeName="HIDROVIVAModel.Perfil">
+        <MappingFragment StoreEntitySet="Perfil">
+          <ScalarProperty Name="IdPerfil" ColumnName="IdPerfil" />
+          <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
+          <ScalarProperty Name="IdInstalacao" ColumnName="IdInstalacao" />
+          <ScalarProperty Name="TipoPerfil" ColumnName="TipoPerfil" />
+          <ScalarProperty Name="PerfilAtivo" ColumnName="PerfilAtivo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pessoa">
+      <EntityTypeMapping TypeName="HIDROVIVAModel.Pessoa">
+        <MappingFragment StoreEntitySet="Pessoa">
+          <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
+          <ScalarProperty Name="CPF_CNPJ" ColumnName="CPF_CNPJ" />
+          <ScalarProperty Name="IdEndereco" ColumnName="IdEndereco" />
+          <ScalarProperty Name="IdTelefone" ColumnName="IdTelefone" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Senha" ColumnName="Senha" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DataNascimento" ColumnName="DataNascimento" />
+          <ScalarProperty Name="PessoaAtiva" ColumnName="PessoaAtiva" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Taxas">
+      <EntityTypeMapping TypeName="HIDROVIVAModel.Taxas">
+        <MappingFragment StoreEntitySet="Taxas">
+          <ScalarProperty Name="IdTaxa" ColumnName="IdTaxa" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="DataInicioVigencia" ColumnName="DataInicioVigencia" />
+          <ScalarProperty Name="DataFimVigencia" ColumnName="DataFimVigencia" />
+          <ScalarProperty Name="QuantidadeMinimaM3" ColumnName="QuantidadeMinimaM3" />
+          <ScalarProperty Name="QuantidadeMaximaM3" ColumnName="QuantidadeMaximaM3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Telefone">
+      <EntityTypeMapping TypeName="HIDROVIVAModel.Telefone">
+        <MappingFragment StoreEntitySet="Telefone">
+          <ScalarProperty Name="IdTelefone" ColumnName="IdTelefone" />
+          <ScalarProperty Name="Telefone1" ColumnName="Telefone1" />
+          <ScalarProperty Name="Telefone2" ColumnName="Telefone2" />
+          <ScalarProperty Name="Telefone3" ColumnName="Telefone3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
